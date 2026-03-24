@@ -639,4 +639,13 @@ function cerrarModal(){
   document.body.style.overflow='';
 }
 window.addEventListener('load',function(){
-  var ov=do
+  var ov=document.getElementById('mdProg');
+  if(ov){
+    ov.addEventListener('click',function(e){
+      if(e.target===ov) cerrarModal();
+    });
+  }
+});
+</script>
+</body>
+</html>
