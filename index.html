@@ -653,10 +653,18 @@ function envWA(e){
   </div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 function abrirModal(){
   document.getElementById('mdProg').classList.add('on');
   document.body.style.overflow='hidden';
 }
 function cerrarModal(){
-  do
+  document.getElementById('mdProg').classList.remove('on');
+  document.body.style.overflow='';
+}
+document.getElementById('mdProg').addEventListener('click', function(e){
+  if(e.target === this) cerrarModal();
+});
+</script>
+</body>
+</html>
